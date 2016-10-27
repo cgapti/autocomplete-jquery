@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script src="JS/jquery.autocomplete.js"></script>
+<script>
+jQuery(function(){
+//$("#country").autocomplete("list.jsp");
+	$("#country").autocomplete("http://localhost:8079/readFile");
+	
+});
+</script>
+ <script>  
+$(document).ready(function(){  
+	$("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+	
+    $("#country").keydown(function(){  
+        $("#country").css("background-color", "red");  
+    });  
+    $("#country").keyup(function(){  
+        $("#country").css("background-color", "yellow");  
+    });  
+    
+    $("#Submit").hover(function(){  
+        $(this).css("background-color", "violet");  
+        }, function(){  
+        $(this).css("background-color", "green");  
+    });  
+});  
+</script>  
+</head>
+<body>
+<div>
+menu
+</div>
+<center>
+<p id="p1">Java(jsp)/jQuery Autocompleter Example</p>
+ <form action="list.jsp">
+<br>
+Select Country   :
+<input type="text" id="country" name="country"/>
+<input type="submit" name="Submit" id="Submit" value="Submit">
+ 
+</font>
+ </font>
+ </form>
+</body>
+</html>
